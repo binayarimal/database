@@ -27,26 +27,25 @@ List three data types that can be used in a table.
 Date, Text, Numeric
 
 Given this payments table, provide an English description of the following queries and include their results:
+SELECT date, amount
+FROM payments;
 
-     SELECT date, amount
-     FROM payments;
+retrieve all the dates and amounts from the payment table.
+The result would be table with 2 columns of dates and amounts.
 
-     retrieve all the dates and amounts from the payment table.
-     The result would be table with 2 columns of dates and amounts.
-
-     SELECT amount
-     FROM payments
-     WHERE amount > 500;
+SELECT amount
+FROM payments
+WHERE amount > 500;
      
-     retrieve all the amount that is greater then 500 from oayments table.
-     The result would be a a table with a column of dates that are less than 500.
+retrieve all the amount that is greater then 500 from the payments table.
+The result would be a a table with a column of amount that are less than 500.
 
-     SELECT *
-     FROM payments
-     WHERE payee = 'Mega Foods';
+SELECT *
+FROM payments
+WHERE payee = 'Mega Foods';
       
-     retrieve data from all columns where the payee is "Mega foods".
-     The result is a table of all the data from the row that has "Mega Food" in the payee column.
+retrieve data from all columns where the payee is "Mega foods".
+The result is a table of all the data from the row that has "Mega Food" in the payee column.
 
 Given this users table, write SQL queries using the following criteria and include the output:
 
@@ -54,7 +53,7 @@ The email and sign-up date for the user named DeAndre Data.
 
 SELECT email, signup date
 FROM users
-WHERE name = DeAndre Data
+WHERE name = "DeAndre Data"
 
 The user ID for the user with email 'aleesia.algorithm@uw.edu'.
 
