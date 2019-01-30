@@ -1,0 +1,86 @@
+Write out a generic SELECT statement.
+ SELECT number
+ FROM phoneNumber
+ WHERE id LIKE '%Johnson';
+
+Create a fun way to remember the order of operations in a SELECT statement, such as a mnemonic.
+Here is a little jingle: SELECT what you wanna get, FROM the place you wanna take, from WHEREVER, LIKE however.
+
+Given this dogs table, write queries to select the following pieces of data:
+Intake teams typically guess the breed of shelter dogs, so the breed column may have multiple words (for example, "Labrador Collie mix").
+
+Display the name, gender, and age of all dogs that are part Labrador.
+SELECT name,gender,age 
+FROM dogs
+WHERE breed LIKE %Labrador%
+
+Display the ids of all dogs that are under 1 year old.
+SELECT id
+FROM dogs
+WHERE age < 1
+
+Display the name and age of all dogs that are female and over 35lbs.
+SELECT name,age
+FROM dogs
+WHERE gender = "F" AND weight > 135
+
+Display all of the information about all dogs that are not Shepherd mixes
+SELECT *
+FROM dogs
+WHERE breed NOT LIKE "%Sheperd%"
+
+Display the id, age, weight, and breed of all dogs that are either over 60lbs or Great Danes.
+SELECT id,age,weight,breed
+FROM dogs
+WHERE weight > 50 OR breed="Great Danes"
+
+Given this cats table, what records are returned from these queries?
+
+SELECT name, adoption_date FROM cats;
+All the names and adoption dates from the name and adoption_date column
+
+SELECT name, age FROM cats;
+All the names and ages from the name and age column
+
+From the cats table, write queries to select the following pieces of data.
+Display all the information about all of the available cats.
+SELECT * FROM cats
+
+Display the name and sex of all cats who are 7 years old.
+SELECT name,sex 
+FROM cats 
+WHERE age = 7;
+
+Find all of the names of the cats, so you don’t choose duplicate names for new cats.
+SELECT name
+FROM cats
+
+List each comparison operator and explain when you would use it. Include a real world example for each.
+If you can’t list these from memory, do these flashcards until you can!
+Equal operator(=) returns values that are equal to the specified value.
+Example: Finding all the cats whose color is equal to black.
+
+Lesser than operator (<) returns values that are less than what you specify.
+Example: Selecting people that make less than a certain amount a month for Student Loans.
+
+Lesser than or equal operator (<=) returns values that are lesser than or equal to what you specify.
+Example: Selecting food that have lesser than or equal to a specified calories.
+
+Greater than operator (>) returns values that are greater than what you specify.
+Example: Selecting kids that are greater than a specified height required to ride a roller coaster.
+
+Greater than or equal operator (>=) returns values that are greater than or equal to what you specify
+example: Selecting people that are greater than or equal to 18 to sign forms.
+
+Inequality Operator (!=/<>) returns values that are not equal to what you specify.
+example: Selecting all the kids whose Measels vaccination isn't completed.
+
+From the cats table, what data is returned from these queries?
+SELECT name FROM cats WHERE gender = ‘F’; 
+All the names of the female cats from the name column.
+
+SELECT name FROM cats WHERE age <> 3;
+The names of the cats that have age that is not 3.
+
+SELECT ID FROM cats WHERE name != ‘Mushi’ AND gender = ‘M’;
+The id of the male cats whose name isn't "Mushi".
