@@ -98,8 +98,10 @@ ORDER BY holds.rank
 
 List all of the library patrons. If they have one or more books checked out, list the books with the patrons.
 
-SELECT patrons, books.title
-FROM transactions
-RIGHT OUTER JOIN patrons ON patrons.id = transactions.patron_id
-JOIN books ON books.isbn = transactions.isbn
- 
+Select DISTINCT patrons.name,books.title
+FROM transactions 
+JOIN patrons
+ON patrons.id = transactions.patron_id
+LEFT OUTER JOIN books AS books
+ON books.isbn = transactions.isbn AND
+transactions.checked_in_date is NULL;
